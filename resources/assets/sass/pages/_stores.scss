@@ -1,0 +1,61 @@
+.store-card{
+	padding: 0 !important;
+	border: 1px $grey-lighter solid;
+	margin:15px 0;
+
+	h4 {
+	color: $black;
+	font-size: 16px;
+	}
+	i{
+		margin-right: 8px;
+	}
+	strong{
+		font-family: $heading-font;
+	}
+}
+.store-card-content{
+	padding:15px;
+	border-bottom: 1px $grey-lighter solid;
+	color: $grey-light;
+	p {
+	min-height:80px;
+	color:black;
+	}
+	i, strong{
+	color:black;
+	}
+}
+.store-card-contact{
+	padding:15px 0;
+	display:inline-block;
+	width:100%;
+	color:$grey-light;
+
+	div > strong, div > i{
+	color:$black;
+
+	}
+}
+.store-cover{
+	margin:4px;
+	border-bottom: 1px $grey-lighter solid;
+	img{
+		max-height: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
+.store-direction {
+	background:$secondary-color-dark;
+	padding: 8px;
+	text-align: center;
+	transition:200ms background linear;
+	&:hover{
+		background:$secondary-color;
+	}
+	a{
+		color: white;
+		font-weight: bold;
+	}
+}

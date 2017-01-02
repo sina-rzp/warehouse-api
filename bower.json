@@ -1,0 +1,50 @@
+{
+  "name": "coldstorage-cms",
+  "description": "Cold Storage CMS",
+  "main": "welcome.blade.php",
+  "authors": [
+    "Hazel Tan <hazel.tan@lionandlion.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "html5",
+    "css3",
+    "bootstrap3",
+    "laravel",
+    "jquery"
+  ],
+  "moduleType": [],
+  "homepage": "/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1",
+    "owl.carousel": "owl-carousel2#~2.1.6",
+    "font-awesome": "fontawesome#~4.6.3",
+    "jquery-validation": "jquery-validate#~1.15.1",
+    "video.js": "videojs#~5.13.0",
+    "masonry": "~4.1.1",
+    "matchHeight": "matchheight#~0.7.0",
+    "headroom.js": "https://unpkg.com/headroom.js/bower.zip"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "~3.5.0",
+    "mocha": "~3.0.2"
+  }
+}

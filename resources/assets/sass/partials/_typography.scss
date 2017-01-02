@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Foco-Bold';
+  src: url('../fonts/Foco-Bold.eot?') format('eot'), 
+  	url('../fonts/Foco-Bold.woff') format('woff'),
+  	url('../fonts/Foco-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Foco-Regular';
+  src: url('../fonts/Foco-Regular.eot?') format('eot'), 
+  	url('../fonts/Foco-Regular.woff') format('woff'),
+  	url('../fonts/Foco-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PermanentMarker';
+  src: url('../fonts/PermanentMarker.eot?') format('eot'), 
+  	url('../fonts/PermanentMarker.woff') format('woff'),
+  	url('../fonts/PermanentMarker.ttf') format('truetype');
+}
+
+body{
+  font-family: $body-font;
+}
+h1, h2, h3, h4, h5, h6{
+	margin-top: 0;
+  	color: $secondary-color-dark;
+  	font-family: $heading-font;
+    word-break:break-word;
+}
+h1, h2{
+  	margin-bottom: 15px;
+  	font-size: 32px;
+    @media all and (max-width: 768px){
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+}
+.has-subheading {
+	margin-bottom: 10px;
+	+ p{
+		margin-bottom: 30px;
+	}
+}
+a{
+	color: $primary-color;
+	transition: all 0.2s ease;
+}
+a:hover{
+	text-decoration: none;
+	color: $primary-color-dark;
+}
+.text-primary{
+	color: $primary-color;
+}
+.muted{
+	color: $grey-light;
+}
+p{
+  word-break:break-word;
+  font-size: 16px;
+}

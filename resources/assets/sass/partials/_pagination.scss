@@ -1,0 +1,36 @@
+.pagination{
+	li a,
+	li span{
+		margin: 0 5px;
+		padding: 3px 10px 2px;
+		border: 1px solid $grey-light;
+		color: $grey-light;
+	}
+	> .active > a,
+	> .active > span{
+		margin: 0 5px;
+		padding: 3px 10px 2px;
+		border: 1px solid $grey-light;
+		background-color: $grey-light;
+		color: $white;
+		cursor: pointer;
+	}
+	> .active > a:hover,
+	> .active > span:hover{
+		background-color: $primary-color;
+		border-color: $primary-color;
+	}
+	li:first-child a,
+	li:first-child span,
+	li:last-child a,
+	li:last-child span{
+		background: none;
+		// border: none;
+		border-radius: 0;
+		color: $black;
+	}
+	> .disabled > span, > li.disabled > span:hover,
+	> .disabled > a, > li.disabled > a:hover,{
+		color: $grey-lightest;
+	}
+}

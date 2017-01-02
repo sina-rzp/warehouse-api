@@ -1,0 +1,115 @@
+#ugc {
+    margin-bottom: 45px;
+}
+#ugc_content {
+    margin-top: 15px;
+}
+.ugc-post {
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    height: 300px;
+}
+.ugc-content {
+    opacity: 0;
+    background: #fff;
+    position: relative;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+.ugc-content > div {
+    box-sizing: border-box;
+}
+.ugc-post:hover .ugc-content {
+    opacity: 1;
+}
+.ugc-post:hover .ugc-content-footer {
+    transform: translateY(0);
+}
+.ugc-content-header {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 36px;
+    height: 50px;
+}
+.ugc-content-header a {
+    color: #517fa4;
+}
+.ugc-content-body {
+    padding: 10px 30px;
+    font-size: 10px;
+    height: 250px;
+}
+.ugc-content-body a {
+    color: #517fa4;
+    font-weight: bold;
+}
+.ugc-content-footer {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: transform .3s ease .2s;
+    transition: transform .3s ease .2s;
+}
+.ugc-content-footer a {
+    color: #fff;
+}
+.ugc-content-footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.ugc-content-footer > div {
+    float: left;
+    height: inherit;
+    text-align: center;
+}
+.ugc-content-author-img {
+    width: 25%;
+}
+.owl-carousel .owl-item .ugc-content-author-img img {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+}
+.ugc-content-author-name {
+    width: 65%;
+    font-weight: bold;
+}
+.ugc-content-author-love {
+    width: 10%;
+}
+#myFreshBytes{
+    position: relative;
+
+    h2{
+        color: $primary-color;
+        font-family: $accent-font;
+        margin-bottom: 15px;
+    }
+    p{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media all and (min-width: 768px){
+        .owl-item{
+            padding: 10px;
+        }
+    }
+    @media all and (max-width: 768px){
+        padding-bottom:  0;
+        
+        .container{
+            padding: 0;
+        }
+        .owl-prev, .owl-next{
+            top: 50%;
+            opacity: 0.7;
+        }
+    }
+}

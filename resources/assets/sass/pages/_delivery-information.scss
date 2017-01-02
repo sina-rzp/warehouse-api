@@ -1,0 +1,144 @@
+    #delivery-table {
+    // border: 1px #ddd solid;
+    // td,
+    // th {
+    //     padding: 10px 20px;
+    // }
+    // td {
+    //     border-left: 1px #ddd solid;
+    // }
+    // td:nth-child(1) {
+    //     text-align: left;
+    //     border-right: 1px #ddd solid;
+    // }
+    // tr: {
+    //     background: red;
+    // }
+    // th {
+    //     background: white;
+    // }
+    // p {
+    //     color: $primary-color;
+    //     margin: 0;
+    // }
+    // strong {
+    //     font-family: $heading-font;
+    // }
+    // tr:nth-child(1) {
+    //     background: #1a0157;
+    //     color: white;
+    // }
+    // tr:nth-child(1) td {
+    //     border-left: 1px solid white;
+    // }
+    // tr:nth-child(1) th {
+    //     border-right: 1px solid white;
+    // }
+    // tr:nth-child(1) td:last {
+    //     border-left: 1px solid white;
+    // }
+    max-width: 900px;
+    display:block;
+    margin: 0 auto;
+    table {
+        border: 1px solid #ccc;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        @media (max-width: 600px) {
+            border: 0;
+        }
+        p {
+            margin: 0;
+        }
+        tr {
+            border: 1px solid #ddd;
+            @media (max-width: 600px) {
+                margin-bottom: 10px;
+                display: block;
+                &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                &:before {
+                    display: block;
+                    border-bottom: 2px solid #ddd;
+                }
+            }
+            &:nth-child(even) {
+                background: #f7f5f7;
+                @media (max-width: 600px) {
+                    background: white;
+                }
+            }
+        }
+        thead {
+            @media (max-width: 600px) {
+                display: none;
+            }
+            th {
+                background: $secondary-color-dark;
+                color: white;
+            }
+            strong {
+                font-family: $heading-font;
+            }
+        }
+        tbody {
+            th {
+                color: $primary-color;
+                background: white;
+                text-align: left;
+                @media (max-width: 600px) {
+                    background: $primary-color;
+                    color: white;
+                    display: block;
+                }
+            }
+        }
+        th,
+        td {
+            padding: 10px 25px;
+            text-align: center;
+        }
+        th {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        td {
+            border-left: 1px #ddd solid;
+            &:first-child {
+                text-align: left;
+                border-left: 0;
+                @media (max-width: 600px) {
+                    text-align: right;
+                }
+            }
+            @media (max-width: 600px) {
+                box-sizing: border-box;
+                display: block;
+                float: left;
+                clear: left;
+                width: 100%;
+                text-align: right;
+                font-size: 13px;
+                border-bottom: 1px dotted #ccc;
+                &:last-child {
+                    border-bottom: 0;
+                }
+                &:before {
+                    content: attr(data-label);
+                    float: left;
+                    text-transform: uppercase;
+                    font-family: $heading-font;
+                }
+                &:first-child {
+                    background: #ddd;
+                }
+            }
+        }
+    }
+}

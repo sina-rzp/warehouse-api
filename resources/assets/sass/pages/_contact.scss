@@ -1,0 +1,75 @@
+#icons{
+  background: #50b748;
+  width:40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  margin: 4%;
+}
+.media-body p{
+  margin: 0;
+}
+#icons i {
+  font-size: 20px;
+  top: 10px;
+  position: relative;
+}
+#contact-details .col-xs-9{
+  margin-top: 8px;
+}
+#contact-form{
+  select{
+    -webkit-appearance:none;
+  }
+  @media all and (max-width: 768px){
+    .btn{
+      margin: 0;
+    }
+  }
+}
+#date-picker-select:after{
+content: "\f073";
+}
+#contact-info {
+  margin-bottom: 8%;
+ #icons{
+  margin-right: 10px;
+  }
+ h5{
+  color: $primary-color;
+  }
+}
+#honorific{
+  width: 90%;
+}
+.media-body h5:nth-child(2){
+  color: $secondary-color-dark !important;
+}
+
+input.flatpickr-mobile{
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      padding: 4px 12px;
+      border: 1px solid #ccc;
+      width:100%;
+    }
+label.input-error {
+    color: #FF1919;
+    padding: 5px 0;
+}
+.input-valid {
+    border-color:#009500;
+    box-shadow: 0px 0px 10px #009500;
+}
+
+form[name='feedback']{
+  label{
+    font-family: $heading-font;
+  }
+}
+
+.form-group > .row{
+  margin-left: -15px;
+  margin-right: -15px;
+}

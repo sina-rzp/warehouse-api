@@ -1,0 +1,20 @@
+.breadcrumb{
+	margin-bottom: 0;
+	background-color: transparent;
+	padding-left: 0;
+
+	a{
+		color: $black;
+		font-weight: bold;
+	}
+	li.active a{
+		color: $primary-color
+	}
+	> li + li:before{
+		padding: 10px;
+		content: '\f105';
+		color: $black;
+		font-family: 'FontAwesome';
+		font-weight: bold;
+	}
+}

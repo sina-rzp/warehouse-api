@@ -1,0 +1,117 @@
+html, body{
+	width: 100%;
+	overflow-x: hidden;
+	font-size: 14px;
+}
+.no-padding{
+	padding: 0 !important;
+}
+@media all and (max-width: 992px){
+	.main-content{
+		margin-top: 100px;
+	}	
+}
+.container-fluid{
+	padding: 0;
+}
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+.vpad-10{
+	padding-top: 10px;
+	padding-bottom: 10px
+}
+.vpad-30{
+	padding-top: 30px;
+	padding-bottom: 30px
+}
+.vpad-60{
+	padding-top: 30px;
+	padding-bottom: 60px;
+
+	h1{
+	@media (max-width:768px){
+		font-size: 24px;
+		}
+	}
+}
+.center-absolute{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.bg-full-image{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.mobpad-0{
+	@media(max-width: 768px){
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.row{
+	margin-left: 0;
+	margin-right: 0;
+	@media all and (max-width: 768px){
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+.page-static-header{
+	background-size: cover !important;
+    background-position: center !important;
+    height: 0;
+    padding-top: 25%;
+    text-align: center;
+    position: relative;
+	@media all and (max-width: 992px){
+		padding-top: 33%;
+	}
+	@media all and (max-width: 768px){
+		padding-top: 50%;
+	}
+	@media all and (max-width: 480px){
+		padding-top: 75%;
+	}
+}
+.single-article-page{
+	@media all and (max-width: 768px){
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}

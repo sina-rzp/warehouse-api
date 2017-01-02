@@ -1,0 +1,137 @@
+#articleContent {
+    min-height: 0;
+    -moz-column-width: 240px;
+    -webkit-column-width: 240px;
+    column-width: 240px;
+    margin-bottom: 60px;
+    @media (max-width: 991px) {
+        -webkit-column-width: 15em;
+        -moz-column-width: 15em;
+        column-width: 15em;
+    }
+    @media (max-width: 479px) {
+        -webkit-column-width: 10em;
+        -moz-column-width: 10em;
+        column-width: 10em;
+    }
+}
+// #emailBtn{
+//     background: #464646;
+//     i{
+//         margin-right: 4px;
+//     }
+// }
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.readMore {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    @media (max-width: 480px){
+        max-width: 100%;
+    }
+}
+
+
+
+#articleContainer {
+    @media(max-width: 768px) {
+        padding: 0;
+    }
+}
+
+#articlePagination {
+    visibility: hidden;
+}
+
+#infscr-loading {
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    img{
+        max-width: 60px;
+    }
+}
+
+#article-cat{
+    width: 240px;
+    height: 180px;
+    margin: 0 8px 0 0;
+    max-width: 100%;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        transition:all ease 200ms;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    @media all and (max-width: 992px){
+        width: auto;
+        img{
+            margin: 0;
+        }
+    }
+}
+#articleTitle{
+    margin-top: 20px;
+    margin-bottom: 6px;
+    color: $black;
+    @media all and (max-width: 768px){
+        font-size: 24px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+}
+#articleTime{
+    color: $grey-light;
+    margin-bottom: 15px;
+    i{
+        color: $black;
+        margin-right: 8px;
+    }
+}
+#articleCover{
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 100%;
+    @media (max-width: 480px){
+            min-height: 14em;
+    }
+    @media (min-width: 480px){
+            min-height: 22em;
+    }
+    @media (min-width: 991px){
+            min-height: 25em;
+    }    
+}

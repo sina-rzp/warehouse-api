@@ -1,0 +1,134 @@
+#topFeaturedNews {
+    padding-top: 15px;
+    // padding-bottom: 10px;
+    border: 1px $grey-lighter solid;
+    img {
+        max-height: 240px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+        @media(min-width: 1080px) {
+            max-height: 268px;
+        }
+    }
+    i {
+    	color: $black;
+    }
+}
+
+#topFeaturedNewsContent {
+    // position: absolute;
+    bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    @media(max-width: 991px) {
+        position: relative;
+    }
+    i {
+        margin-right: 8px;
+    }
+}
+
+#featuredNews {
+    border: 1px solid $grey-lighter;
+    @media (max-width: 991px) {
+        border-top: none;
+        padding: 0;
+    }
+    @media (min-width: 991px) {
+        border-left: none;
+        > .col-xs-12{
+            padding: 0;
+        }
+    }
+    h5 {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+.featuredNewsPost {
+    div {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+    margin-bottom: 8px;
+    a:hover {
+        color: green;
+        p:hover {
+            color: green;
+        }
+    }
+    p {
+        margin-bottom: 4px;
+        color: $black;
+        margin-left: 10px;
+        word-break: break-word;
+        font-weight: normal;
+    }
+    .news-title {
+        color: $grey-light;
+    }
+    img {
+        max-height: 80px;
+        transition: all 200ms ease;
+        @media (max-width: 320px) {
+            max-height: none;
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    .side-news-date {
+        color: $grey-light !important;
+    }
+    .side-news-title {
+        color: $black;
+        font-family: $heading-font;
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+.single-sidebar{
+    .side-news-date{
+        margin-bottom: 0;
+        font-size: 14px;
+        color: $grey-light !important;
+    }
+}
+
+#moreNews {
+    padding: 15px;
+    background: #f5f5f5;
+    font-family: 'Foco-Bold';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media(max-width: 991px) {
+        position: relative;
+        padding: 8px 15px;
+    }
+}
+
+#moreNews a {
+    color: black;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+#more-events {
+    padding: 0px;
+    .select-wrapper {
+        max-width: 25%;
+        margin: 0 10px;
+        @media (max-width: 480px) {
+            max-width: 100%;
+            margin: 3px 0;
+        }
+    }
+}

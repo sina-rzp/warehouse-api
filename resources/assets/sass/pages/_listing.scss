@@ -1,0 +1,538 @@
+.page-listing{
+	@media all and (max-width: 768px){
+		> .vpad-60{
+			padding-top: 0;
+			padding-bottom: 40px;
+		}
+		h1{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-size: 24px;
+		}
+	}
+}
+
+.page-listing .badge{
+    display: inline-block;
+    margin-top: -3px;
+    margin-left: 10px;
+    padding: 3px 6px 1px;	
+    border-radius: 3px;
+	border: 1px solid $grey-light;
+	color: $grey-light;
+	background-color: transparent;
+}
+
+.listing-banner{
+	background-image: url('http://placehold.it/1300x400');
+	min-height: 150px;
+	margin-bottom: 20px;
+	padding-top: 40px;
+
+	h1{
+		margin-bottom: 0;
+	}
+	p{
+		width: 50%;
+		min-width: 280px;
+		margin: auto;
+	}
+}
+.listing-text{
+	margin-bottom: 20px;
+}
+.listing-content{
+	@media all and (max-width: 768px){
+		padding: 0
+	}
+}
+.listing-subcategories{
+	background-color: $grey-lightest;
+	padding: 20px 30px 8px;
+	margin-bottom: 30px;
+	a{
+		color: $black;
+	}
+	a:hover{
+		color: $primary-color;
+	}
+
+	@media all and (max-width: 768px){
+		margin-bottom: 0;
+		padding: 14px 0 0;
+	}
+}
+.listing-subcategory{
+	margin-bottom: 12px;
+}
+.listing-controls{
+
+	input, select{
+		min-width: 150px;
+		margin-left: 5px;
+	}
+	.pagination{
+		margin: 0;
+	}
+	.btn-sort{
+		margin-top: 18px;
+		color: $grey-medium;
+		cursor: pointer;
+	}
+	@media all and (max-width: 768px){
+		margin-bottom: 0;
+	}
+}
+.page-product-listing{
+	@media all and (max-width: 768px){
+		.listing-controls{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+.page-featured-brands{
+	.listing-controls{
+		// background-color: $grey-lightest;
+		// padding: 15px 20px;
+
+		.pagination{
+
+		}
+	}
+	@media all and (max-width: 768px){
+		.listing-controls{
+			background-color: transparent;
+			padding: 0;
+		}
+	}
+}
+.listing-grid{
+	margin-top: 30px;
+
+	> .row{
+		border-bottom: 1px solid $grey-lightest;
+	}
+	.panel{
+		box-shadow: none;
+	}
+	.panel-heading{
+		position: relative;
+		height: 150px;
+		img{
+			position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    max-height: 85%;
+			margin: auto;
+		}
+	}
+	.panel-title, .product-name{
+		margin-bottom: 5px;
+		font-weight: bold;
+		font-size: 16px;		
+	}
+	.product-name, .panel-title{
+		color: $black;
+	}
+	.product-name:hover, .panel-title:hover{
+		color: $primary-color;
+	}
+	.product-image:hover{
+		opacity: 0.7;
+	}
+	.product-description{
+		margin-bottom: 3px;
+		font-size: 14px;
+	}
+	.product-extra{
+
+	}
+	.recipe-details{
+		list-style-type: none;
+			padding-left: 0;
+		li{
+			list-style-type: none;
+			display: inline-block;
+		}
+		li:first-child{
+			margin-right: 20px;
+			@media all and (max-width: 768px){
+				margin-right: 14px;
+			}
+			
+		}
+		img{
+			margin-right: 5px;
+		}
+		span{
+			vertical-align: middle;
+		}
+	}
+}
+.listing-product-panel{
+	margin-bottom: 0;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border: 1px solid $grey-lightest;
+	border-radius: 0;
+}
+.listing-product-panel:nth-child(4n){
+	border-right: 1px solid $grey-lightest;
+}
+.listing-recipe-panel{
+	margin-bottom: 0;
+	.panel-body{
+		padding: 6px 0 12px
+	}
+	@media all and (max-width: 768px){	
+		&:nth-child(odd){
+			padding-right: 7px;
+			padding-left: 30px;
+		}
+		&:nth-child(even){
+			padding-left: 7px;
+			padding-right: 30px;
+		}
+	}
+}
+.listing-footer{
+	.pagination{
+		margin: 40px auto 0;
+	}
+}
+.listing-sidebar{
+	.panel{
+		box-shadow: none;
+	}
+	.panel-heading, .nav-listing-mob li{
+		position: relative;
+		height: 50px;
+	}
+	.panel-group .panel-heading + .panel-collapse > .panel-body, 
+	.panel-group .panel-heading + .panel-collapse > .list-group,
+	.list-group-item{
+		border: none;
+	}
+	.list-group-item, .nav-listing-mob li{
+		padding-left: 55px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		color: $grey-medium;
+		a{
+			color: $black
+		}
+		a:hover{
+			color: $primary-color;
+		}
+	}	
+	
+	.panel-title, .nav-listing-mob li{
+		.svg, svg{
+			float: left;
+		    margin-bottom: 5px;
+		    margin-right: 10px;
+		    max-width: 30px;
+		    max-height: 30px;
+		    transition: all 0.2s ease-in-out;
+		}
+		span{
+		    display: inline-block;
+	    	max-width: 100px;
+	    	margin-top: 8px;
+	    	font-size: 14px;
+		}
+		a:after{
+		    position: absolute;
+		    top: 13px;
+		    right: 15px;
+		    content: '\f106';
+		    font-family: 'FontAwesome';
+		    font-size: 18px;
+		    font-weight: bold;
+		} 
+		a.collapsed:after{
+		    content: '\f107';
+		}
+		a:after, span{
+			color: $primary-color;
+		}
+		a.collapsed:after, .collapsed span{
+			color: $black;
+		}
+		a svg path{
+			fill: $primary-color !important;
+			transition: all 0.2s ease-in-out;
+		}
+		a.collapsed svg path{
+			fill: $grey-medium !important;
+		}
+	}
+
+	@media all and (max-width: 768px){
+		padding: 0;
+		&.vpad-30{
+			padding: 0;
+		}
+		.nav-listing-mob-header{
+			padding: 12px 15px;
+			background-color: $secondary-color-dark;
+			cursor: pointer;
+			p{
+				margin-bottom: 0;
+				color: $white;
+				font-family: $heading-font;
+				font-size: 16px;
+			}
+			p:after{
+				float: right;
+			    content: '\f106';
+			    font-family: 'FontAwesome';
+			}
+		}
+		.nav-listing-mob-header.collapse{
+			p:after{
+				content: '\f107'
+			}
+			+ .nav-listing-mob{
+				display: none;
+			}
+		}
+		.nav-listing-mob{
+			display: block;
+		}
+		.panel-group{
+			margin-bottom: 0;
+			.list-group{
+				// padding-top: 10px;
+				// padding-bottom: 10px;
+			}
+		}
+		.nav-listing-mob ul{
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+		.nav-listing-mob li{
+			list-style-type: none;
+			padding-left: 15px;
+			a{
+
+			    display: block;
+			    margin-top: 10px;
+			    font-family: $heading-font;
+			}
+			a:after{
+				content: '' !important;
+			}
+			.badge{
+				margin-top: -3px;
+				color: $grey-light;
+				font-family: $body-font;
+				font-weight: normal;
+			}
+		}
+		.panel-heading, .nav-listing-mob li{
+		    background-color: $grey-lightest;
+	    	border-bottom: 1px solid $grey-light;
+	    	span{
+	    		max-width: initial;
+	    	}
+		}
+		.panel-heading:last-child,
+		.panel-collapse:last-child{
+			border-bottom: none;
+		}
+	}
+}
+.listing-brands{
+	a{
+		color: $black;
+	}
+	a:hover{
+		color: $primary-color;
+	}
+}
+.page-recipe-listing, .page-article-listing{
+	h1{
+		@media all and (max-width: 480px){	
+			text-align: center;
+		}
+	}
+	h1+p{
+		margin-bottom: 30px;
+	}
+	
+	.recipe-details{
+		li{
+			display: inline;
+			@media (max-width: 480px){
+				display: block;
+			}
+		}
+		.svg{
+
+		}
+	}
+	svg{
+		max-width: 20px;
+		max-height: 20px;
+		vertical-align: middle;
+	}
+
+	.listing-grid{
+		> .row{
+			border-bottom: none
+		}
+		.panel-heading{
+			height: 0;
+			padding-top: 100%;
+			img{
+				width: 100%;
+				max-height: 100%;
+				transition: all 0.2s ease-in-out;
+				-webkit-backface-visibility: hidden;
+			}
+			img:hover{
+				opacity: 0.7;
+			}
+		}
+	}
+	.listing-product-panel{
+		border: none;
+		box-shadow: none;
+	}
+	.listing-subcategories{	
+		padding-bottom: 20px;
+		margin-bottom: 50px;
+		@media all and (max-width: 768px){	
+			padding: 0;
+			margin-bottom: 24px;
+		}
+	}
+	.listing-subcategory{
+		display: inline-block;
+		margin-bottom: 0;
+
+		a{
+			color: $black;
+		    padding: 8px 20px;
+		    font-family: $heading-font
+		}
+		@media all and (min-width: 768px){				
+			&.active a{
+			    background-color: $white;
+	    		border: 2px solid $secondary-color-dark;
+	    		color: $secondary-color-dark;
+			}
+		}
+		@media all and (max-width: 768px){
+			a{
+				display: inline-block;
+				padding: 16px 5px;
+				margin: 0 10px;
+			}
+			&.active a{
+				border-bottom: 2px solid $secondary-color-dark;
+			}
+		}
+	}
+}
+
+#articleListing, #recipeListing {
+    padding: 12px 8px;
+}
+
+#carouselArticleCategoryMobile, #carouselRecipeCategoryMobile {
+    .owl-stage-outer{
+        z-index: 10;
+    }
+    .listing-subcategory a {
+        border: 2px solid $grey-light;
+        color: black;
+        display: inline-block;
+        padding: 9px 10px;
+        margin: 0 4px;
+        background: white;
+        transition:background 200ms linear;
+        &:hover{
+            background: $grey-light;
+        }
+        @media(max-width: 768px) {
+            padding: 9px 10px;
+            margin: 0 4px;
+        }
+        &.active{
+            background: $grey-light !important;
+        }
+    }
+    .item {}
+    .owl-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        i {
+            font-size: 20pt;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .owl-prev, .owl-next {
+        position: absolute;
+        height: 100%;
+        width: 62px;
+        top: 0;
+        background: $grey-lightest;
+        color: $black;
+        z-index: 100;
+        @media (max-width: 768px){
+            width: 40px;
+        }
+    }
+    .owl-prev {
+        left: 0;
+    }
+    .owl-next {
+        right: 0;
+    }
+}
+// ARTICLE, JOURNAL MASONRY LISTING
+.grid{
+margin-bottom: 80px;
+}
+  .grid-item{
+    /*width: 25%;*/
+    float: left;
+    @media (max-width: 320px){
+    	 width:100%;
+    }
+  }
+  .grid-sizer{
+    padding: 10px;
+    @media (max-width: 320px){
+    	 padding: 10px 0;
+    }
+  }
+  .grid-card{
+    border:1px $grey-lighter solid;
+  }
+  .grid-content{
+    padding:20px 15px;
+    h5 {
+            color: $black;
+            transition: 0.2s ease all;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        p {
+            word-break:break-word;
+        }
+  }

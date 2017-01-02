@@ -1,0 +1,55 @@
+#bannerBackground {
+    background: url('../images/banner-background-history.jpg') no-repeat;
+    
+    h1{
+        font-family: $accent-font;
+        color: $primary-color;
+    }
+     #tagline {
+        display: block;
+        margin: 0 auto;
+        max-width: 600px;
+        position: relative;
+        padding: 15px;
+    }
+    #caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        width: 100%;
+    }
+}
+
+#aboutParagraph {
+    // -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    // -moz-column-count: 2;
+    /* Firefox */
+    // column-count: 2;
+    margin: 0 auto;
+    // display: block;
+    max-width: 600px;
+    position: relative;
+    @media (max-width: 768px) {
+        // column-count: 1;
+        // -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        // -moz-column-count: 1;
+    }
+}
+
+#aboutCaption {
+    max-width: 600px;
+    display: block;
+    margin: 32px auto;
+    font-family: $heading-font;
+}
+
+#about {
+    // padding: 8% 0;
+    h2{
+    	font-family: $accent-font;
+    	color: $primary-color;
+    }
+}

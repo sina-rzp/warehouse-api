@@ -1,0 +1,52 @@
+#err-container {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform:translate(-50%,-50%);
+    @media (max-width: 991px) {
+        position: relative;
+        height: auto;
+        padding-top: 60px;
+        top: 0;
+        left: 0;
+        transform:none;
+    }
+}
+
+
+.title {
+    font-size: 100px;
+    color: #1a0157;
+    font-family: $heading-font;
+    @media(max-width: 480px){
+        font-size: 48px;
+    }
+}
+
+.quote {
+    font-size: 24px;
+    font-family: $heading-font;
+    color: #5b5b5b;
+}
+
+.explanation {
+    font-size: 12pt;
+    color: #555;
+    div {
+        margin-top: 8px;
+        margin-bottom: 4px;
+        @media(max-width: 320px){
+            width: 100%;
+        }
+    }
+    i {
+        color: #555;
+        font-size: 24pt;
+        margin-right: 4%;
+        margin-bottom: 4%;
+        transition:color 200ms ease;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}

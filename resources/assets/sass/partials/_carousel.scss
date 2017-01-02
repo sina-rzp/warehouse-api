@@ -1,0 +1,315 @@
+.owl-carousel{
+  position: relative;
+
+  .disabled{
+    display: none;
+  }
+
+  .owl-dots{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .owl-dot{
+    display: inline-block;
+    margin: 7px;
+    span{
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 2px solid $primary-color;
+
+    }
+  }
+  .owl-dot.active{
+    span{      
+      background-color: $grey-dark;
+      border: 2px solid transparent;
+    }
+  }
+  .owl-item img{
+    width: initial;
+    max-width: 100%;
+    margin: auto;
+  }
+}
+.owl-prev, .owl-next{
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  background: $primary-color;
+  color: $white;
+  font-size: 36px;
+  text-align: center;
+  z-index: 100;
+}
+.owl-prev{
+  left: 0;
+}
+.owl-next{
+  right: 0;
+}
+
+#carouselHomeBanner{
+  .carousel-content{
+    left: 50%;
+    right: auto;
+
+    h2, h3{
+      text-transform: uppercase;
+      font-family: $accent-font;
+    }
+  }
+  .bitesize-banner{
+    background-image: url(../images/homepage_banner_desktop_03-bitesize.jpg);
+    background-position: top center;
+
+    @media all and (min-width: 768px){
+      h2{
+        font-size: 54px;
+      }
+      .carousel-content{
+        left: 58%;
+      }
+    }
+    @media all and (max-width: 768px){
+      // background-image: url(../images/banner-bitesize.jpg);
+      background-image: none;
+      // background-position: top center;
+      padding-top: 0 !important;
+      text-align: center;
+
+      h2{
+        font-size: 36px;
+      }
+      img{
+        width: 100%;
+      }
+      h2, h3{
+        margin-bottom: 0;
+      }
+      .btn{
+        margin-top: 10px;
+        margin-bottom: 50px;
+      }
+      .carousel-content{
+        margin-top: -10px;
+      }
+    }
+  }
+  .img-recipe-category{
+    right: 50%;
+    left: auto;
+    top: 0;
+    transform: none;
+    img{
+      margin: 30px;
+    }
+  }
+  .slide{
+    position: relative;
+    padding-top: 36%;
+  }
+  .slide-recipe{
+    i{
+      color: $secondary-color-dark;
+    }
+    h2{
+      margin-bottom: 5px;
+      font-size: 32px;
+      color: $primary-color;
+    }
+    h3{
+
+    }
+    .btn{
+      margin: 10px 0 20px;
+    }
+    .img-recipe-category{
+      position: absolute;
+      top: 10px;
+    }
+  }
+  .recipe-stars{
+    margin-bottom: 10px;
+  }
+  .recipe-name{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .recipe-products{
+    max-width: 500px;
+    height: 120px;
+    margin: 20px auto 30px;
+
+    .product{
+      position: relative;
+      height: 90px;
+    }
+    img{
+      padding: 10px;
+      max-height: 100px;
+    }
+    p{
+      top: auto;
+      bottom: -30px;
+      transform: none;
+      max-width: 80px;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: bold;
+    }
+    i{
+      position: absolute;
+      top: 70%;
+      left: auto;
+      right: -5%;
+    }
+  }
+  .recipe-cta{
+    margin-top: 20px;
+    .accent-link{
+      margin-left: 20px;
+      color: $secondary-color-dark;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  @media all and (max-width: 1200px){
+    .carousel-content{
+      left: 40%;
+    }
+    .slide{
+      padding-top: 50%;
+    }
+    .slide-recipe{
+      h3{
+        font-size: 20px;
+      }
+      .img-recipe-category img{
+        // margin: 15px 0;
+      }
+    }
+  }
+  @media all and (max-width: 768px){
+    .center-absolute{
+      position: relative;
+      left: initial;
+      right: initial;
+      top: initial;
+      transform: none;
+    }
+    .slide-recipe{
+      h3{
+        font-size: 18px;
+        padding: 0 40px;
+      }
+      h2{
+        font-size: 22px;
+      }
+      p{
+        padding: 0 15px;
+      }
+      .recipe-name{
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .img-recipe-category{
+        position: relative;
+        img{
+          margin: 30px auto;
+        }
+      }
+      .recipe-cta{
+        margin-bottom: 50px;
+        a{
+          display: block;
+          max-width: 180px;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+}
+
+#home-freshbaskets{
+  position: relative;
+  .owl-prev, .owl-next{
+    top: 55%;
+  }
+  .product{
+    padding: 0 15px;
+    img{
+      max-height: 150px
+    }
+    a{
+      color: $black;
+    }
+    a:hover{
+      color: $primary-color;
+    }
+  }
+
+  @media all and (max-width: 768px){
+    .owl-stage-outer{
+      overflow: visible;
+    }
+    .owl-stage{
+      width: 10000% !important;
+      margin-left: -30%;
+    }
+    .owl-item{
+      margin: 0 15px 0 0 !important;
+    }
+    .owl-nav{
+      display: none;
+    }
+  }
+}
+#carouselFreshBaskets{
+  img{
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+#carouselFeaturedBrands{
+  background-color: $grey-lightest;
+  padding: 20px 0 10px;
+  margin-bottom: 30px;
+  .owl-stage{
+    margin: auto;
+  }
+  .brand-slide{
+    .img-container{
+      position: relative;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    img{
+      max-height: 80px;
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
+#carouselCategoryMobile{
+  .owl-stage{
+    // margin-left: -42%;
+  }
+  @media all and (max-width: 600px){
+    .owl-stage{
+      // margin-left: -38%;
+    }
+  }
+}

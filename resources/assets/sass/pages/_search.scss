@@ -1,0 +1,36 @@
+.search-more-results{
+	i{
+		margin-left: 10px;
+	}
+}
+@media all and (max-width: 768px){
+	.search-from{
+		padding-left: 30px;
+		padding-right: 15px;
+	}
+	.search-more-results{
+		margin: 20px 0;
+	}
+}
+.search-card{
+	margin-bottom: 5px;
+	p{
+		margin-bottom: 0;
+	}
+	.col-xs-4 img{
+		width: 100%;
+	}
+	@media all and (min-width: 768px){
+		.col-xs-4, .col-xs-8{
+			padding: 0;
+		}
+		.col-xs-4 img{
+			margin-bottom: 20px;
+		}
+	}
+	@media all and (max-width: 768px){
+		.col-xs-8{
+			padding-left: 0;
+		}
+	}
+}
