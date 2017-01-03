@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Item;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,8 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     { 
-        // App::singleton('data', function() { return array('abc' => 1); });
-        // view()->share('customData', 'Bukit Bintang');
+        //register the observer for the Item
+        Item::observe(new \App\Observers\StatusObserver);
     }
 
     /**

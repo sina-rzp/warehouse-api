@@ -23,7 +23,11 @@
 
 
 
-          <li><a href="{{ url('admin/home') }}"><i class="fa fa-home" aria-hidden="true"></i> <span>Homepage</span></a></li>
+          <li><a href="{{ url('admin/order') }}"><i class="fa fa-home" aria-hidden="true"></i> <span>Orders</span></a></li>
+
+          <li><a href="{{ url('admin/item') }}"><i class="fa fa-home" aria-hidden="true"></i> <span>Items</span></a></li>
+
+          <li><a href="{{ url('admin/product') }}"><i class="fa fa-home" aria-hidden="true"></i> <span>Products</span></a></li>
 
           <li class="treeview">
               <a href="#"><i class="fa fa-cogs"></i> <span>Advanced</span> <i class="fa fa-angle-left pull-right"></i></a>

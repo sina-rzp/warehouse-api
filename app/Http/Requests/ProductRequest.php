@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class ArticleRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
+class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,15 +25,9 @@ class ArticleRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:2|max:255',
-            'slug' => 'unique:articles,slug,'.\Request::get('id'),
-            'content' => 'required|min:2',
-            'date' => 'required|date',
-            'thumbnail' => 'required',
-            'image' => 'required',
-            'status' => 'required',
-            // 'category_id' => 'required',
-            'meta_description' => 'required|max:160'
+
+            'sku' => 'required|unique:products,sku,'.\Request::get('id'),
+            'colour' => 'required'
         ];
     }
 

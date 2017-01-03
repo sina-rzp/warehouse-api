@@ -12,16 +12,16 @@
 */
 
 
-Route::group(['middleware' => 'web', 'prefix' => 'featured-brands'], function () {
+// Route::group(['middleware' => 'web', 'prefix' => 'featured-brands'], function () {
 
-    Route::get('{title}', ['as' => 'featured-brand-product', 'uses' => 'BrandController@products'], function ($title) {});
-    Route::get('/', ['as' => 'featured-brands', 'uses' => 'BrandController@index'], function () {});
+//     Route::get('{title}', ['as' => 'featured-brand-product', 'uses' => 'BrandController@products'], function ($title) {});
+//     Route::get('/', ['as' => 'featured-brands', 'uses' => 'BrandController@index'], function () {});
 
-});
+// });
 
 
 //all the other PAGES
-Route::get('{title}', ['middleware' => 'web', 'as' => 'other-page', 'uses' => 'PagesController@show'] , function ($title) {});
+Route::get('{title}', ['middleware' => 'web', 'as' => 'other-page', 'uses' => 'PageController@index'] , function ($title) {});
 
 // ADMIN PANEL ROUTES//
 Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin'], function()
@@ -31,8 +31,10 @@ Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin'], function()
     // [...] other routes
 
     // Dick CRUD: Define the resources for the entities you want to CRUD.
-    \CRUD::resource('article', 'Admin\ArticleCrudController');
-    \CRUD::resource('recipe', 'Admin\RecipeCrudController');
+    \CRUD::resource('order', 'Admin\OrderCrudController');
+    \CRUD::resource('product', 'Admin\ProductCrudController');
+    \CRUD::resource('item', 'Admin\ItemCrudController');
+
 
 
 });
