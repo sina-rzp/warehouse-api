@@ -28,8 +28,14 @@ $ php artisan migrate
 
 
 2. Your admin panel will be available at http://localhost/brosa-warehouse/public/admin
+
+
 a) Click on 'Orders' to create and edit orders
+
+
 b) Click on 'Items' to create and edit items
+
+
 b) Click on 'Products' to create and edit products
 
 
