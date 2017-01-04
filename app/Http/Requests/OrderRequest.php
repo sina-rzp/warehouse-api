@@ -26,7 +26,6 @@ class OrderRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     {
         return [
             'customer_name' => 'required|min:2|max:255',
-            'status' => 'required',
             'address' => 'required',
             'order_date' => 'required'
         ];
