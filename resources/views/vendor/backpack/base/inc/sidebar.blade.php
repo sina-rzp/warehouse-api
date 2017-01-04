@@ -6,7 +6,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="http://placehold.it/160x160/00a65a/ffffff/&text={{ Auth::user()->name[0] }}" class="img-circle" alt="User Image">
+            <img src="http://lorempixel.com/output/people-q-c-160-160-1.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
             <p>{{ Auth::user()->name }}</p>
@@ -23,23 +23,11 @@
 
 
 
-          <li><a href="{{ url('admin/order') }}"><i class="fa fa-home" aria-hidden="true"></i> <span>Orders</span></a></li>
+          <li><a href="{{ url('admin/order') }}"><i class="fa fa-credit-card" aria-hidden="true"></i> <span>Orders</span></a></li>
 
-          <li><a href="{{ url('admin/item') }}"><i class="fa fa-home" aria-hidden="true"></i> <span>Items</span></a></li>
+          <li><a href="{{ url('admin/item') }}"><i class="fa fa-plus-circle" aria-hidden="true"></i> <span>Items</span></a></li>
 
-          <li><a href="{{ url('admin/product') }}"><i class="fa fa-home" aria-hidden="true"></i> <span>Products</span></a></li>
-
-          <li class="treeview">
-              <a href="#"><i class="fa fa-cogs"></i> <span>Advanced</span> <i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="{{ url('admin/elfinder') }}"><i class="fa fa-files-o"></i> <span>File manager</span></a></li>
-                <li><a href="{{ url('admin/backup') }}"><i class="fa fa-hdd-o"></i> <span>Backups</span></a></li>
-                <li><a href="{{ url('admin/log') }}"><i class="fa fa-terminal"></i> <span>Logs</span></a></li>
-                <li><a href="{{ url('admin/setting') }}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
-              </ul>
-          </li>
-
-
+          <li><a href="{{ url('admin/product') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Products</span></a></li>
 
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>

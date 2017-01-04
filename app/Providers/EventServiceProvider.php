@@ -9,6 +9,8 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
+
+    // Binding OrderCompleted Listener to CheckStatus
     protected $listen = [
         'App\Events\CheckStatus' => [
             'App\Listeners\OrderCompleted',

@@ -35,16 +35,24 @@ class Order extends Model
 	|--------------------------------------------------------------------------
 	*/
 
+	// Relation to the Item Model
 	public function items()
     {
         return $this->hasMany('App\Models\Item', 'order_id');
     }
 
+    // Relation to the Item Model, with delivered() scope applied
     public function itemsDelivered()
 	{
 	   return $this->hasMany('App\Models\Item')->delivered();
 
 	}
+
+	// Relation to the Product Model
+	public function products()
+    {
+        return $this->hasManyThrough('App\Models\Item', 'App\Models\Prodcut');
+    }
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,8 +60,18 @@ class Order extends Model
 	|--------------------------------------------------------------------------
 	*/
 
+	// Function to create an Order
+	public function scopeCreateOrder($query, $customer_name, $address)
+    {
+        return $this->create([
+            'customer_name' => $customer_name, 
+            'address' => $address, 
+            'status' => 'In Progress', 
+            'order_date' => date('Y-m-d')
+            ]);
+    }
 
-
+	        
 	/*
 	|--------------------------------------------------------------------------
 	| ACCESORS

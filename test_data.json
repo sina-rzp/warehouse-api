@@ -1,0 +1,18 @@
+{
+   "order":{
+      "customer":"James Frank",
+      "items":
+      [
+         {
+            "sku":"aus780",
+            "quantity":2,
+            "colour":"red"
+         },
+         {
+            "sku":"aus790",
+            "quantity":1,
+            "colour":"blue"
+         }
+      ]
+   }
+}

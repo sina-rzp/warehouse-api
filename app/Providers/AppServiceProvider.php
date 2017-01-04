@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     { 
-        //register the observer for the Item
+        //register the observer for the Item Model
         Item::observe(new \App\Observers\StatusObserver);
     }
 

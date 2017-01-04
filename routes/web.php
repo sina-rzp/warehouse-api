@@ -12,20 +12,10 @@
 */
 
 
-// Route::group(['middleware' => 'web', 'prefix' => 'featured-brands'], function () {
-
-//     Route::get('{title}', ['as' => 'featured-brand-product', 'uses' => 'BrandController@products'], function ($title) {});
-//     Route::get('/', ['as' => 'featured-brands', 'uses' => 'BrandController@index'], function () {});
-
-// });
-
-
-//all the other PAGES
-Route::get('{title}', ['middleware' => 'web', 'as' => 'other-page', 'uses' => 'PageController@index'] , function ($title) {});
-
 // ADMIN PANEL ROUTES//
 Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin'], function()
 {
+	// route for dashboard
     Route::get('dashboard', 'Admin\AdminController@index');
 
     // [...] other routes

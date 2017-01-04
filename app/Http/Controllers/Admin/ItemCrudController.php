@@ -25,15 +25,18 @@ class ItemCrudController extends CrudController {
 		| BASIC CRUD INFORMATION
 		|--------------------------------------------------------------------------
 		*/
+        
+        //do not allow the user to delete or reorder
+        $this->crud->denyAccess(['reorder', 'delete']);
+        
 
+        //add the fields
         $this->crud->addField([    // SELECT
                 'label' => 'Order ID',
-                'type' => 'select2',
+                'type' => 'disabled_text',
                 'name' => 'order_id', 
-                'entity' => 'order',
-                'attribute' => 'id',
-                'model' => "App\Models\Order",
-                'hint' => '<b>NOTE:</b> Leave this empty, if this item is not assigned to an order yet',
+                'hint' => '<b>NOTE:</b> This value is set automatically.',
+
             ]);
 
         $this->crud->addField([    // SELECT
@@ -43,21 +46,30 @@ class ItemCrudController extends CrudController {
                 'entity' => 'product',
                 'attribute' => 'id',
                 'model' => "App\Models\Product",
+                'hint' => 'Required',
             ]);
 
         $this->crud->addField([
                 'type' => 'disabled_text',
                 'name' => 'status',
-                'label' => 'Status'
+                'label' => 'Status',
+                'hint' => '<b>NOTE:</b> This value is set automatically.',
             ]);
 
         $this->crud->addField([
                 'type' => 'enum',
                 'name' => 'physical_status',
-                'label' => 'Physical Status'
+                'label' => 'Physical Status',
+                'hint' => '<b>NOTE:</b> Physical Status cannot be set to "Delivered", if this item\'s Status is "Available".<br/>',
             ]);
 
 
+        //add the columns
+        $this->crud->addColumn([
+                'label' => 'Item ID',
+                'type' => 'number',
+                'name' => 'id',
+            ]);
 
         $this->crud->addColumn([
                 'label' => 'Order ID',
@@ -76,6 +88,7 @@ class ItemCrudController extends CrudController {
                 'attribute' => 'id',
                 'model' => "App\Models\Product",
             ]);
+
 
         $this->crud->addColumn([
                 'name' => 'status',

@@ -1264,14 +1264,14 @@ a:focus {
   color: #00a65a;
 }
 .form-group.has-warning label {
-  color: #f39c12;
+  color: #f6d681;
 }
 .form-group.has-warning .form-control {
-  border-color: #f39c12;
+  border-color: #f6d681;
   box-shadow: none;
 }
 .form-group.has-warning .help-block {
-  color: #f39c12;
+  color: #f6d681;
 }
 .form-group.has-error label {
   color: #dd4b39;
@@ -1424,7 +1424,7 @@ a:focus {
 }
 .progress-bar-yellow,
 .progress-bar-warning {
-  background-color: #f39c12;
+  background-color: #f6d681;
 }
 .progress-striped .progress-bar-yellow,
 .progress-striped .progress-bar-warning {
@@ -1543,7 +1543,7 @@ a:focus {
   border-top-color: #dd4b39;
 }
 .box.box-warning {
-  border-top-color: #f39c12;
+  border-top-color: #f6d681;
 }
 .box.box-success {
   border-top-color: #00a65a;
@@ -1631,12 +1631,12 @@ a:focus {
   color: #ffffff;
 }
 .box.box-solid.box-warning {
-  border: 1px solid #f39c12;
+  border: 1px solid #f6d681;
 }
 .box.box-solid.box-warning > .box-header {
   color: #ffffff;
-  background: #f39c12;
-  background-color: #f39c12;
+  background: #f6d681;
+  background-color: #f6d681;
 }
 .box.box-solid.box-warning > .box-header a,
 .box.box-solid.box-warning > .box-header .btn {
@@ -1914,7 +1914,7 @@ a:focus {
   border-left-color: #dd4b39;
 }
 .todo-list .warning {
-  border-left-color: #f39c12;
+  border-left-color: #f6d681;
 }
 .todo-list .info {
   border-left-color: #00c0ef;
@@ -2261,7 +2261,7 @@ a:focus {
   background-color: #d73925;
 }
 .btn-warning {
-  background-color: #f39c12;
+  background-color: #f6d681;
   border-color: #e08e0b;
 }
 .btn-warning:hover,
@@ -2559,7 +2559,7 @@ a:focus {
   border-top-color: #dd4b39;
 }
 .nav-tabs-custom.tab-warning > .nav-tabs > li.active {
-  border-top-color: #f39c12;
+  border-top-color: #f6d681;
 }
 .nav-tabs-custom.tab-success > .nav-tabs > li.active {
   border-top-color: #00a65a;
@@ -2875,13 +2875,13 @@ table.text-center th {
   border-left-color: #3c8dbc;
 }
 .direct-chat-warning .right > .direct-chat-text {
-  background: #f39c12;
-  border-color: #f39c12;
+  background: #f6d681;
+  border-color: #f6d681;
   color: #ffffff;
 }
 .direct-chat-warning .right > .direct-chat-text:after,
 .direct-chat-warning .right > .direct-chat-text:before {
-  border-left-color: #f39c12;
+  border-left-color: #f6d681;
 }
 .direct-chat-info .right > .direct-chat-text {
   background: #00c0ef;

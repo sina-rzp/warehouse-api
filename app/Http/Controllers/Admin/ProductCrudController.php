@@ -26,7 +26,11 @@ class ProductCrudController extends CrudController {
 		|--------------------------------------------------------------------------
 		*/
 
-		
+        //do not allow the user to delete or reorder
+		$this->crud->denyAccess(['reorder', 'delete']);
+        
+        
+        //add the fields
         $this->crud->addField([
                 'type' => 'text',
                 'name' => 'sku',
@@ -41,6 +45,7 @@ class ProductCrudController extends CrudController {
 
 
 
+        //add the columns
         $this->crud->addColumn([
                 'name' => 'id',
                 'label' => 'Product ID'

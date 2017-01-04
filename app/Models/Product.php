@@ -35,16 +35,31 @@ class Product extends Model
 	|--------------------------------------------------------------------------
 	*/
 
+	// Relation to the Item Model
 	public function item()
     {
-        return $this->belongsToMany('App\Models\Item', 'product_id');
+        return $this->hasMany('App\Models\Item', 'product_id');
     }
+
+     // Relation to the Item Model, with available() scope applied
+    public function itemAvailable()
+    {
+        return $this->hasMany('App\Models\Item', 'product_id')->available();
+    }
+
 
 	/*
 	|--------------------------------------------------------------------------
 	| SCOPES
 	|--------------------------------------------------------------------------
 	*/
+	
+	// Function to assign the condition - whether the sku matches with what's passed to it
+	public function scopeProductSku($query, $type)
+    {
+        $matchThese = ['sku' => $type];
+        return $query->where($matchThese);
+    }
 
 	/*
 	|--------------------------------------------------------------------------

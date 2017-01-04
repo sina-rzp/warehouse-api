@@ -14,9 +14,9 @@ class StatusObserver
      */
     public function created (Item $item)
     {
-        //
+        
         \Event::fire(new \App\Events\CheckStatus($item->order_id)); 
-        //check if the item is now delivered
+        //check the order's status - now that items have been manipulated
     }
 
 
@@ -29,9 +29,9 @@ class StatusObserver
      */
     public function updated (Item $item)
     {
-        //
+        
         \Event::fire(new \App\Events\CheckStatus($item->order_id)); 
-        //check if the item is now delivered
+        //check the order's status - now that items have been manipulated
     }
 
 
@@ -43,8 +43,9 @@ class StatusObserver
      */
     public function deleted(Item $item)
     {
-        //
+
         \Event::fire(new \App\Events\CheckStatus($item->order_id)); 
+        //check the order's status - now that items have been manipulated
     }
 
 }

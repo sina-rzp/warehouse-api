@@ -26,8 +26,10 @@ class OrderCrudController extends CrudController {
 		|--------------------------------------------------------------------------
 		*/
 
-		// $this->crud->setFromDb();
+        //do not allow the user to delete or reorder
+        $this->crud->denyAccess(['reorder', 'delete']);
 
+        //add the fields
         $this->crud->addField([
                 'type' => 'text',
                 'name' => 'customer_name',
@@ -41,58 +43,60 @@ class OrderCrudController extends CrudController {
             ]);
 
 
-     $this->crud->addField([    // ENUM
+        $this->crud->addField([    // ENUM
                     'name' => 'status',
                     'label' => 'Status',
-                    'type' => 'enum',
+                    'type' => 'disabled_text',
+                    'hint' => '<b>NOTE:</b> This value is set automatically.',
                 ]);
 
-     $this->crud->addField([    // ENUM
+        $this->crud->addField([    // ENUM
                     'name' => 'order_date',
                     'label' => 'Order Date',
                     'type' => 'date',
                 ]);
 
 
-    $this->crud->addField([       
-                            'label' => 'Items',
-                            'type' => 'custom_1_to_n',
-                            'name' => 'items', // the method that defines the relationship in your Model
-                            'entity' => 'items', // the method that defines the relationship in your Model
-                            'attribute' => 'id', // foreign key attribute that is shown to user
-                            'model' => 'App\Models\Item', // foreign key model
-                            'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
-                        ]);
+        // $this->crud->addField([       
+        //                 'label' => 'Items',
+        //                 'type' => 'custom_1_to_n',
+        //                 'name' => 'items', // the method that defines the relationship in your Model
+        //                 'entity' => 'items', // the method that defines the relationship in your Model
+        //                 'attribute' => 'id', // foreign key attribute that is shown to user
+        //                 'model' => 'App\Models\Item', // foreign key model
+        //                 'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
+        //             ]);
 
 
-    $this->crud->addColumn([
-                    'type' => 'number',
-                    'name' => 'id',
-                    'label' => 'Order Number'
-                ]);
+         //add the columns
+        $this->crud->addColumn([
+                        'type' => 'number',
+                        'name' => 'id',
+                        'label' => 'Order Number'
+                    ]);
 
-    $this->crud->addColumn([
-                    'type' => 'text',
-                    'name' => 'customer_name',
-                    'label' => 'Customer'
-                ]);
+        $this->crud->addColumn([
+                        'type' => 'text',
+                        'name' => 'customer_name',
+                        'label' => 'Customer'
+                    ]);
 
-    $this->crud->addColumn([
-                    'type' => 'address',
-                    'name' => 'address',
-                    'label' => 'Address'
-                ]);
+        $this->crud->addColumn([
+                        'type' => 'address',
+                        'name' => 'address',
+                        'label' => 'Address'
+                    ]);
 
-    $this->crud->addColumn([
-                    'name' => 'status',
-                    'label' => 'Status',
-                ]);
+        $this->crud->addColumn([
+                        'name' => 'status',
+                        'label' => 'Status',
+                    ]);
 
-    $this->crud->addColumn([    // ENUM
-                    'name' => 'order_date',
-                    'label' => 'Order Date',
-                    'type' => 'date',
-                ]);
+        $this->crud->addColumn([    // ENUM
+                        'name' => 'order_date',
+                        'label' => 'Order Date',
+                        'type' => 'date',
+                    ]);
 
 		// ------ CRUD FIELDS
         // $this->crud->addField($options, 'update/create/both');

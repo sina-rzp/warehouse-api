@@ -35,15 +35,18 @@ class Item extends Model
 	|--------------------------------------------------------------------------
 	*/
 
+    // Relation to the Order Model
     public function order()
     {
         return $this->belongsTo('App\Models\Order');
     }
 
+     // Relation to the Product Model
 	public function product()
     {
-        return $this->hasOne('App\Models\Product' , 'id');
+        return $this->belongsTo('App\Models\Product' , 'id');
     }
+
 
 
 
@@ -53,10 +56,25 @@ class Item extends Model
 	|--------------------------------------------------------------------------
 	*/
 
+    // Function to assign the condition - whether the item is delivered
     public function scopeDelivered($query)
     {
         $matchThese = ['physical_status' => 'Delivered'];
         return $query->where($matchThese);
+    }
+
+    // Function to assign the condition - whether the item is available
+    public function scopeAvailable($query)
+    {
+        $matchThese = ['status' => 'Available'];
+        return $query->where($matchThese);
+    }
+
+    // Function to create an Item
+    public function scopeCreateItem($query, $product_id, $order_id)
+    {
+        $matchThese = ['status' => 'Available'];
+        return $this->create(['order_id' => $order_id, 'product_id' => $product_id, 'physical_status' => 'To order', 'status' => 'Assigned']);
     }
 
 	/*
@@ -92,29 +110,37 @@ class Item extends Model
     {
         $final_value = '';
 
-    	if ($value == 'Delivered') //check if the item's Physical Status is Delivered
+        //check if the item's Physical Status is Delivered
+    	if ($value == 'Delivered') 
     	{
-    		if ($this->attributes['status'] == 'Assigned') //check if the item's status is Assigned
+            //check if the item's status is Assigned
+    		if ($this->attributes['status'] == 'Assigned') 
     		{
-                $final_value = $value;
+                $final_value = $value; // And go ahead and assign it to Delivered
 
     		}
-    		elseif (!empty($this->physical_status)) //otherwise if the previous value is available
+
+            // Otherwise if the previous value is available
+    		elseif (!empty($this->physical_status)) 
     		{
-                $final_value = $this->physical_status;// set it to the previous value
+                $final_value = $this->physical_status;// Then set it to the previous value
     		}
+
+            // otherwise - set it to "To order"
     		else
     		{
-                $final_value = 'To order'; // otherwise - set it to "To order"
+                $final_value = 'To order'; 
     		}
     		
     	}
-    	else //If it's not set to Delivered, then user is manipulating the data fine
+        // If it's not set to Delivered, then the user is manipulating the data fine
+    	else 
     	{
-    		$final_value = $value; //assign it
+    		$final_value = $value; //assign the data
     	}
 
-        $this->attributes['physical_status'] = $final_value; //then set it to the previous value - avoid setting it to Delivered
+        //assign the value to the attribute
+        $this->attributes['physical_status'] = $final_value; 
 
     }
 

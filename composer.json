@@ -18,7 +18,8 @@
         "davejamesmiller/laravel-breadcrumbs": "^3.0",
         "cviebrock/eloquent-sluggable": "^4.1",
         "barryvdh/laravel-elfinder": "^0.3.5",
-        "intervention/image": "^2.0"
+        "intervention/image": "^2.0",
+        "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -30,32 +30,46 @@ class OrderCompleted
      */
     public function handle(CheckStatus $event)
     {
+        //Get the orderID
         $order_id = $event->item;
 
-        $order = Order::whereId($order_id)->with('items', 'itemsDelivered')->get()->first();
-
-        $items = count($order->items);
-        $itemsDelivered = count($order->itemsDelivered);
-
-        switch(true)
+        // If the orderID does exist
+        if (!empty($order_id))
         {
-            case $items == $itemsDelivered && $items != 0:
-                $completed = Order::whereId($order_id)->update(['status' => 'Completed']);
-                break;
 
-            case $items > $itemsDelivered:
-                $in_progress = Order::whereId($order_id)->update(['status' => 'In Progress']);
-                break;
+            // Get the number of items and delivered items
+            $order = Order::whereId($order_id)->withCount('items', 'itemsDelivered')->get()->first();
 
-            case $items == 0:
-                $cancelled = Order::whereId($order_id)->update(['status' => 'Cancelled']);
-                break;
+            $items = $order->items_count;
+            $itemsDelivered = $order->items_delivered_count;
 
-            default:
-                $in_progress = Order::whereId($order_id)->update(['status' => 'In Progress']);
-                break;
+            switch(true)
+            {
+                // If the number of items and delivered items are equal
+                case $items == $itemsDelivered && $items != 0:
+
+                    // Then update the order to Completed
+                    $completed = Order::whereId($order_id)->update(['status' => 'Completed']);
+                    break;
+
+                // If the number of items is bigger than the number of delivered items
+                case $items > $itemsDelivered:
+
+                    // Then update the order to In Progress
+                    $in_progress = Order::whereId($order_id)->update(['status' => 'In Progress']);
+                    break;
+
+                // If the number of items is 0
+                case $items == 0:
+                    //Then set it to Cancelled
+                    $cancelled = Order::whereId($order_id)->update(['status' => 'Cancelled']);
+                    break;
+
+                // Default: set it to In Progress
+                default:
+                    $in_progress = Order::whereId($order_id)->update(['status' => 'In Progress']);
+                    break;
+            }
         }
-
-        //
     }
 }
