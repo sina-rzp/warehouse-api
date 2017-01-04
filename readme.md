@@ -25,10 +25,14 @@ $ php artisan migrate
 ## Usage 
 
 1. Register a new user at http://localhost/brosa-warehouse/public/admin/register
+
+
 2. Your admin panel will be available at http://localhost/brosa-warehouse/public/admin
-	a) Click on 'Orders' to create and edit orders
-	b) Click on 'Items' to create and edit items
-	b) Click on 'Products' to create and edit products
+a) Click on 'Orders' to create and edit orders
+b) Click on 'Items' to create and edit items
+b) Click on 'Products' to create and edit products
+
+
 3. Send JSON data to http://localhost/brosa-warehouse/public/api/call with the format same as test_date.json
 
 
